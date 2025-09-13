@@ -1,4 +1,16 @@
 {
   "extends": "@saas/tsconfig/node.json",
-  "include": ["src/**/*"],
+  "include": [
+    "src/**/*",
+    "../../packages/auth/src/**/*",
+    "../../config/**/*"
+  ],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@saas/auth": ["../../packages/auth/src"],
+      "@saas/eslint-config": ["../../config/eslint-config"],
+      "@saas/prettier": ["../../config/prettier"]
+    }
+  }
 }
