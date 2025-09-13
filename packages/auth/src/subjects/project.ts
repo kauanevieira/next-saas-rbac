@@ -1,4 +1,5 @@
 import { z } from "zod"
+import { projectsSchema } from "../models/projects"
 
 export const projectSubject = z.tuple([
   z.union([
@@ -8,7 +9,10 @@ export const projectSubject = z.tuple([
     z.literal('delete'),
     z.literal('manage')
   ]),
-  z.literal('Project')
+  z.union([
+    z.literal('Project'),
+    projectsSchema
+  ])
 ])
 
 export type ProjectSubject = z.infer<typeof projectSubject>
