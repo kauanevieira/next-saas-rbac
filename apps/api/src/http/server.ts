@@ -14,6 +14,8 @@ import { createAccount } from './routes/auth/create-account'
 import { authenticateWithPassword } from './routes/auth/authenticate-with-password'
 import { getProfile } from './routes/auth/get-profile'
 import { errorHandler } from './error-handler'
+import { requestPasswordRecover } from './routes/auth/request-password-recover'
+import { resetPassword } from './routes/auth/reset-password'
 
 const app = fastify().withTypeProvider<ZodTypeProvider>()
 
@@ -53,6 +55,11 @@ app.register(authenticateWithPassword)
 // http GET :3333/profile Authorization='Bearer <token>'
 // Decodificar o token e pegar o sub (id do user) no jwt.io
 app.register(getProfile)
+
+// http POST :3333/password/recover email=kauane@acme.com
+app.register(requestPasswordRecover)
+
+app.register(resetPassword)
 
 app.listen({ port: 3333 }).then(() => {
   console.log('HTTP server running!')
