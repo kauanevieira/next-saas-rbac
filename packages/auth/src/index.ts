@@ -11,6 +11,7 @@ import z from 'zod';
 export * from './models/user'
 export * from './models/projects'
 export * from './models/organization'
+export * from './roles'
 
 const appAbilitiesSchema = z.union([
   projectSubject,
