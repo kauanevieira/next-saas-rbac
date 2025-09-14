@@ -4339,5 +4339,5 @@ zod@^3.22.4:
 
 zod@^4.1.8:
   version "4.1.8"
-  resolved "https://registry.npmjs.org/zod/-/zod-4.1.8.tgz"
+  resolved "https://registry.yarnpkg.com/zod/-/zod-4.1.8.tgz#54f024adc634dd185006a8415da2bdd495b9d92b"
   integrity sha512-5R1P+WwQqmmMIEACyzSvo4JXHY5WiAFHRMg+zBZKgKS+Q1viRa0C1hmUKtHltoIFKtIdki3pRxkmpP74jnNYHQ==
