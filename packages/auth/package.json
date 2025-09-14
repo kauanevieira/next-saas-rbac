@@ -9,14 +9,12 @@
     "@saas/prettier": "file:../../config/prettier",
     "@saas/tsconfig": "file:../../config/typescript-config"
   },
-  "eslintConfig": {
-    "extends": [
-      "@saas/eslint-config/base"
-    ]
-  },
-  "prettier": "@saas/prettier",
   "dependencies": {
     "@casl/ability": "^6.7.3",
     "zod": "^4.1.8"
+  },
+  "prettier": "@saas/prettier",
+  "eslintConfig": {
+    "extends": ["@saas/eslint-config/base.js"]
   }
 }
