@@ -3,7 +3,8 @@
   "include": [
     "src/**/*",
     "../../packages/auth/src/**/*",
-    "../../config/**/*"
+    "../../config/**/*",
+    "@types/**/*"
   ],
   "compilerOptions": {
     "baseUrl": ".",
