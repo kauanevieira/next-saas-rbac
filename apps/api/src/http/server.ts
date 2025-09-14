@@ -16,6 +16,7 @@ import { getProfile } from './routes/auth/get-profile'
 import { errorHandler } from './error-handler'
 import { requestPasswordRecover } from './routes/auth/request-password-recover'
 import { resetPassword } from './routes/auth/reset-password'
+import { authenticateWithGithub } from './routes/auth/authenticate-with-github'
 
 const app = fastify().withTypeProvider<ZodTypeProvider>()
 
@@ -52,6 +53,8 @@ app.register(createAccount)
 // http POST :3333/sessions/password email=kauane@acme.com password=123456
 app.register(authenticateWithPassword)
 
+app.register(authenticateWithGithub)
+
 // http GET :3333/profile Authorization='Bearer <token>'
 // Decodificar o token e pegar o sub (id do user) no jwt.io
 app.register(getProfile)
@@ -59,6 +62,7 @@ app.register(getProfile)
 // http POST :3333/password/recover email=kauane@acme.com
 app.register(requestPasswordRecover)
 
+// http POST :3333/password/reset code=123 password=654321
 app.register(resetPassword)
 
 app.listen({ port: 3333 }).then(() => {
