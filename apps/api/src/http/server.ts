@@ -12,6 +12,7 @@ import {
 
 import { createAccount } from './routes/auth/create-account'
 import { authenticateWithPassword } from './routes/auth/authenticate-with-password'
+import { getProfile } from './routes/auth/get-profile'
 
 const app = fastify().withTypeProvider<ZodTypeProvider>()
 
@@ -40,8 +41,15 @@ app.register(fastifyJwt, {
 
 app.register(fastifyCors)
 
+// http POST :3333/users name=Kauane email=kauane@acme.com password=123456
 app.register(createAccount)
+
+// http POST :3333/sessions/password email=kauane@acme.com password=123456
 app.register(authenticateWithPassword)
+
+// http GET :3333/profile Authorization='Bearer <token>'
+// Decodificar o token e pegar o sub (id do user) no jwt.io
+app.register(getProfile)
 
 app.listen({ port: 3333 }).then(() => {
   console.log('HTTP server running!')
