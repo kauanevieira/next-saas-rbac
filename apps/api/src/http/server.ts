@@ -18,8 +18,8 @@ import { requestPasswordRecover } from './routes/auth/request-password-recover'
 import { resetPassword } from './routes/auth/reset-password'
 import { authenticateWithGithub } from './routes/auth/authenticate-with-github'
 import { env } from '@saas/env'
-import { createOrganization } from './routes/auth/create-organization'
-import { getMembership } from './routes/auth/get-membership'
+import { createOrganization } from './routes/orgs/create-organization'
+import { getMembership } from './routes/orgs/get-membership'
 
 const app = fastify().withTypeProvider<ZodTypeProvider>()
 
