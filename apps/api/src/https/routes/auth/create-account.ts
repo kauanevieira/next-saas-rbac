@@ -1,3 +1,5 @@
+// Rota para criar uma nova conta de usuário
+
 import { hash } from 'bcryptjs'
 import type { FastifyInstance } from 'fastify'
 import type { ZodTypeProvider } from 'fastify-type-provider-zod'
