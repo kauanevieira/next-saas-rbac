@@ -1,3 +1,5 @@
+// Rota para criar uma nova organização
+
 import type { FastifyInstance } from 'fastify'
 import type { ZodTypeProvider } from 'fastify-type-provider-zod'
 import { z } from 'zod'
