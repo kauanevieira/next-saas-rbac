@@ -2,7 +2,10 @@
   "name": "@saas/api",
   "version": "1.0.0",
   "scripts": {
-    "dev": "tsx watch src/http/server.ts",
+    "dev": "yarn env:load tsx watch src/http/server.ts",
+    "db:migrate": "yarn env:load prisma migrate dev",
+    "db:studio": "yarn env:load prisma studio",
+    "env:load": "dotenv -e ../../.env --",
     "seed": "tsx prisma/seed.ts"
   },
   "dependencies": {
@@ -13,6 +16,7 @@
     "@prisma/adapter-pg": "^7.4.0",
     "@prisma/client": "^7.4.0",
     "@saas/auth": "*",
+    "@saas/env": "*",
     "bcryptjs": "^3.0.3",
     "dotenv": "^17.3.1",
     "fastify": "^5.7.4",
@@ -29,6 +33,7 @@
     "@types/bcryptjs": "^3.0.0",
     "@types/node": "^20.12.6",
     "@types/pg": "^8.16.0",
+    "dotenv-cli": "^11.0.0",
     "prisma": "^7.4.0",
     "tsx": "^4.7.2"
   },
