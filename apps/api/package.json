@@ -16,6 +16,7 @@
     "@saas/prettier": "*",
     "@saas/tsconfig": "*",
     "@types/node": "^20.12.6",
+    "prisma": "^7.4.0",
     "tsx": "^4.7.2"
   },
   "prettier": "@saas/prettier",
