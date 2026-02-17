@@ -10,7 +10,6 @@
     "env:load": "dotenv -e ../../.env --"
   },
   "dependencies": {
-    "@radix-ui/react-dropdown-menu": "^2.1.16",
     "@saas/auth": "*",
     "@saas/env": "*",
     "class-variance-authority": "^0.7.1",
