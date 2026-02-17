@@ -12,6 +12,11 @@ export const api = ky.create({
           const { cookies: serverCookies } = await import('next/headers')
           const cookieStore = await serverCookies()
           token = cookieStore.get('token')?.value
+        } else {
+          // Cliente (browser)
+          const cookies = document.cookie.split('; ')
+          const tokenCookie = cookies.find((c) => c.startsWith('token='))
+          token = tokenCookie?.split('=')[1]
         }
 
         if (token) {
