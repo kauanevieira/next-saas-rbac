@@ -1,10 +1,7 @@
-import { Header } from '@/src/components/header'
-
 export default async function Home() {
   return (
-    <div className="py-4">
-      <Header />
-      <main></main>
+    <div className="space-y-4">
+      <h1 className="text-2xl font-bold">Projects</h1>
     </div>
   )
 }
