@@ -5178,6 +5178,11 @@ kleur@^4.1.5:
   resolved "https://registry.yarnpkg.com/kleur/-/kleur-4.1.5.tgz#95106101795f7050c6c650f350c683febddb1780"
   integrity sha512-o+NO+8WrRiQEE4/7nwRJhN1HWpVmJm511pBHUxPLtp0BUISzlBplORYSmTclCnJvQq2tKu/sgl3xVpkc7ZWuQQ==
 
+ky@^1.14.3:
+  version "1.14.3"
+  resolved "https://registry.yarnpkg.com/ky/-/ky-1.14.3.tgz#d7fcc6ac93d1588accee72cc44dcc6cf84c0bdaa"
+  integrity sha512-9zy9lkjac+TR1c2tG+mkNSVlyOpInnWdSMiue4F+kq8TwJSgv6o8jhLRg8Ho6SnZ9wOYUq/yozts9qQCfk7bIw==
+
 language-subtag-registry@^0.3.20:
   version "0.3.23"
   resolved "https://registry.npmjs.org/language-subtag-registry/-/language-subtag-registry-0.3.23.tgz"
