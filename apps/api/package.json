@@ -6,7 +6,9 @@
     "db:migrate": "yarn env:load prisma migrate dev",
     "db:studio": "yarn env:load prisma studio",
     "env:load": "dotenv -e ../../.env --",
-    "seed": "tsx prisma/seed.ts"
+    "seed": "tsx prisma/seed.ts",
+    "build": "tsup",
+    "start": "node dist/http/server.js"
   },
   "dependencies": {
     "@fastify/cors": "^11.2.0",
@@ -35,6 +37,7 @@
     "@types/pg": "^8.16.0",
     "dotenv-cli": "^11.0.0",
     "prisma": "^7.4.0",
+    "tsup": "^8.5.1",
     "tsx": "^4.7.2"
   },
   "prettier": "@saas/prettier",
